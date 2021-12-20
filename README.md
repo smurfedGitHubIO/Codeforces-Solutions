@@ -1,5 +1,5 @@
 # Codeforces-Solutions
 
-Trying to be active in CF too.
+Trying to be active in CF.
 
-Hope I would still improve. :D
+Hope I could improve. :D
