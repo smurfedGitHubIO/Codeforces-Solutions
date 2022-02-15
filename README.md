@@ -1,7 +1,3 @@
 # Codeforces-Solutions
 
-Trying to be active in CF.
-
-Hope I could improve. :D
-
-Code tomorrow!
+Solutions to solved problems in Codeforces.
