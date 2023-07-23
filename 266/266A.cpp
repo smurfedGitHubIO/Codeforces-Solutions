@@ -11,13 +11,13 @@ int main(){
     ll ans = 0;
     for(ll i=1; i<n-1; i++){
         if(i == 1){
-            if(s[i-1] == 'R'){
-                s[i] = (s[i+1] == 'R' ? 'G' : (s[i+1] == 'G' ? 'B' : 'R'));
-                ans ++;
+            if(s[i-1] != s[i] and s[i] != s[i+1]){
+                continue;
+            } else {
+                ans++;
             }
-            else if(){
-
-            }
+        } else if(s[i] == s[i+1]){
+            ans++;
         }
     }
     cout << ans;
