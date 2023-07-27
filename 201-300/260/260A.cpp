@@ -6,22 +6,21 @@ typedef long long int ll;
 int main(){
     ll a, b, n;
     cin >> a >> b >> n;
-    ll q = 1;
-    for(ll i=1; i<=min(n,10); i++){
-        ll mod = (a*q)%b, div = (a*q)/b;
-        if(q < mod){
-            cout << -1;
-            return 0;
+    ll cnt = 0, ans = 0;
+    for(ll i=0; i<10; i++){
+        if((a*10+i)%b == 0){
+            cnt = 1;
+            ans = i;
+            break;
         }
     }
-    ll mod = (a*q)%b, div = (a*q)/b;
-    if(q < mod){
-        cout << -1;
-    } else {
-        cout << (b*(div+1));
-        for(ll i=0; i<max(0, n-10); i++){
+    if(cnt == 1){
+        cout << a*10+ans;
+        for(ll i=0; i<max(0LL,n-1); i++){
             cout << 0;
         }
+    }else{
+        cout << -1;
     }
     return 0;
 }
