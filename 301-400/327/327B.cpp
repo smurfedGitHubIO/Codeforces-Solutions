@@ -2,7 +2,7 @@
 using namespace std;
 
 typedef long long int ll;
-const ll MAXN = 5e5 + 11;
+const ll MAXN = 1500000;
 vector<ll> primes;
 vector<ll> isP(MAXN, true);
 
@@ -13,13 +13,16 @@ void init(){
             primes.emplace_back(i);
         }
         for(ll j=0; j<primes.size() and i*primes[j] < MAXN; j++){
-            isP[i*j] = false;
+            isP[i*primes[j]] = false;
         }
     }
 }
 
 int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     init();
+    // cout << primes.size()<< "\n";
     ll n;
     cin >> n;
     for(ll i=0; i<n; i++){
